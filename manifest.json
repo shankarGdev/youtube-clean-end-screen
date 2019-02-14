@@ -1,0 +1,41 @@
+{
+	"manifest_version" : 2,
+	"name" : "Clean End Screen for Youtube",
+	"short_name": "Clean End Screen",
+	"description": "Get clean end screen on Youtube video.",
+	"version" : "1.0",
+	"author": "Shankar Prakash G",
+	"homepage_url": "http://proxylyx.com",
+	"browser_action": {
+	  "default_title": "Clean End Screen",
+	  "default_icon": "img/icon.png"
+	},
+	"content_scripts": [
+	    {
+	      "matches": [
+	        "https://www.youtube.com/*"
+	      ],
+	      "js": [
+	        "js/content.js"
+	      ],
+	      "run_at": "document_end",
+	      "all_frames": true
+	    }
+  	],
+	"background": {
+	    "scripts": ["js/background.js"],
+	    "persistent": false
+	},
+
+	"icons" : {
+		"16" : "img/icon.png",
+		"48" : "img/icon.png",
+		"128" : "img/icon.png"
+	},
+
+	"permissions": [
+        "tabs", "storage"
+    ],
+
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
