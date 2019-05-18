@@ -4,18 +4,22 @@
   "description": "Project Name",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^3.1.1",
     "gulp-babel": "^6.1.2",
     "gulp-concat": "^2.6.1",
     "gulp-notify": "^2.2.0",
     "gulp-sass": "^3.0.0",
-    "gulp-uglify": "^2.0.0"
-  }
+    "gulp-uglify": "^2.0.0",
+    "snyk": "^1.165.1"
+  },
+  "snyk": true
 }
